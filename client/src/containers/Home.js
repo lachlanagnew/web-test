@@ -3,6 +3,7 @@ import header from '../assets/header.jpg'
 import PackageCard from '../components/packageCard'
 import Posts from '../components/posts'
 import Footer from '../components/footer'
+import ContactCard from '../components/contact-card'
 import {Grid, Row, Col} from 'react-bootstrap'
 
 const style = {
@@ -24,8 +25,7 @@ const style = {
   },
   contact: {
     width: '100%',
-    height: '400px',
-    backgroundColor: '#adccff'
+    backgroundColor: '#9FB8AD'
   },
   footer: {
     width: '100%',
@@ -44,6 +44,16 @@ const style = {
     top: 30,
     left: 50,
     fontSize: 40
+  },
+  contactCard: {
+    marginLeft: '10%',
+    marginRight: '10%',
+    marginTop: '20px',
+    borderRadius: '3px',
+    overflow: 'hidden'
+  },
+  contactContainer: {
+    padding: 20
   }
 }
 
@@ -89,7 +99,11 @@ class Home extends Component {
           </div>
         </div>
         <div style={style.contact}>
-          Contact
+          <div style={style.contactContainer}>
+            <div style={style.contactCard}>
+              <ContactCard />
+            </div>
+          </div>
         </div>
         <div style={style.footer}>
           <Footer />
