@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Home from './containers/Home'
 import {
   BrowserRouter as Router,
   Route,
@@ -19,11 +19,8 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path='/' render={(props) =>
-            <h1> Home </h1> } />
-
-          <Route path='/settings' render={(props) =>
-            <h1> Settings </h1> } />
+          <Route exact path='/' render={(props) => <Home/> } />
+          <Route path='/settings' render={(props) => <h1> Settings </h1> } />
         </div>
       </Router>
     )
