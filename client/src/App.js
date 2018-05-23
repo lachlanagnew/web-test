@@ -1,5 +1,11 @@
 import React, { Component } from 'react'
-import Home from './containers/Home'
+import {
+  HomeContainer,
+  ContactContainer,
+  AboutContainer,
+  PackageContainer,
+  PostContainer
+} from './containers'
 import {
   BrowserRouter as Router,
   Route,
@@ -19,8 +25,11 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path='/' render={(props) => <Home/> } />
-          <Route path='/settings' render={(props) => <h1> Settings </h1> } />
+          <Route exact path='/' render={(props) => <HomeContainer />} />
+          <Route exact path='/contact-us' render={(props) => <ContactContainer />} />
+          <Route exact path='/about' render={(props) => <AboutContainer />} />
+          <Route exact path='/package/*' render={(props) => <PackageContainer />} />
+          <Route exact path='/post/*' render={(props) => <PostContainer />} />
         </div>
       </Router>
     )

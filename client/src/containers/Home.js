@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import header from '../assets/header.jpg'
 import PackageCard from '../components/packageCard'
+import Posts from '../components/posts'
+import Footer from '../components/footer'
 import {Grid, Row, Col} from 'react-bootstrap'
 
 const style = {
@@ -18,15 +20,15 @@ const style = {
   },
   posts: {
     width: '100%',
-    height: '350px'
+    padding: '0px 60px 40px 60px'
   },
   contact: {
     width: '100%',
-    height: '400px'
+    height: '400px',
+    backgroundColor: '#adccff'
   },
   footer: {
     width: '100%',
-    height: '50px',
     backgroundColor: '#eee'
   },
   fill: {
@@ -36,6 +38,12 @@ const style = {
   center: {
     marginLeft: 'auto',
     marginRight: 'auto'
+  },
+  logo: {
+    position: 'absolute',
+    top: 30,
+    left: 50,
+    fontSize: 40
   }
 }
 
@@ -47,7 +55,9 @@ class Home extends Component {
     return (
       <div>
         <div style={style.header}>
-          Header
+          <div style={style.logo}>
+            Logo Here
+          </div>
         </div>
         <div style={style.packages}>
           <div style={[style.fill, style.center]}>
@@ -74,13 +84,15 @@ class Home extends Component {
           </div>
         </div>
         <div style={style.posts}>
-          Posts
+          <div style={[style.fill, style.center]}>
+            <Posts />
+          </div>
         </div>
         <div style={style.contact}>
           Contact
         </div>
         <div style={style.footer}>
-          Footer
+          <Footer />
         </div>
       </div>
     )
