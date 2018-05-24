@@ -7,7 +7,7 @@ class Footer extends Component {
   render () {
     return (
       <div style={{width: '100%', textAlign: 'center'}}>
-        This is the footer
+        Lachlan Agnew 2017 ©
       </div>
     )
   }
