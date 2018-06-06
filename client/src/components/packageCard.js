@@ -9,7 +9,15 @@ const style = {
     backgroundColor: '#eee',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    padding: 15
+  },
+  icon: {
+    width: 75,
+    height: 75
+  },
+  description: {
+    textAlign: 'center'
   }
 }
 
@@ -21,13 +29,13 @@ class PackageCard extends Component {
     return (
       <div style={style.card}>
         <div>
-          <img />
+          <img style={style.icon} src={this.props.pac.image} />
         </div>
         <div>
-          <h3> Mobile </h3>
+          <h3> {this.props.pac.title} </h3>
         </div>
-        <div>
-          description
+        <div style={style.description}>
+          {this.props.pac.desc}
         </div>
       </div>
     )

@@ -6,6 +6,13 @@ import Footer from '../components/footer'
 import ContactCard from '../components/contact-card'
 import {Grid, Row, Col} from 'react-bootstrap'
 
+import phoneIcon from '../assets/icons/svg/smartphone-1.svg'
+import webIcon from '../assets/icons/svg/television-1.svg'
+import hostingIcon from '../assets/icons/svg/folder-16.svg'
+import designIcon from '../assets/icons/svg/windows-2.svg'
+import databaseIcon from '../assets/icons/svg/database-1.svg'
+import cloudIcon from '../assets/icons/svg/cloud-computing-1.svg'
+
 const style = {
   header: {
     width: '100%',
@@ -57,11 +64,41 @@ const style = {
   }
 }
 
+const packages = [{
+  title: 'Mobile Development',
+  desc: 'Using the newest technologies such as react-native to create the best mobile application for you.',
+  image: phoneIcon
+}, {
+  title: 'Web Development',
+  desc: 'desc',
+  image: webIcon
+}, {
+  title: 'Website Hosting',
+  desc: 'desc',
+  image: hostingIcon
+}, {
+  title: 'Design',
+  desc: 'desc',
+  image: designIcon
+}, {
+  title: 'Database Managment',
+  desc: 'desc',
+  image: databaseIcon
+}, {
+  title: 'Cloud Computing',
+  desc: 'desc',
+  image: cloudIcon
+}]
+
 class Home extends Component {
   componentDidMount () {
   }
-
   render () {
+    const packs = packages.map((pac) =>
+      <Col xs={12} sm={6} md={4} lg={4} xl={4}>
+        <PackageCard pac={pac} />
+      </Col>
+    )
     return (
       <div>
         <div style={style.header}>
@@ -72,24 +109,7 @@ class Home extends Component {
         <div style={style.packages}>
           <div style={[style.fill, style.center]}>
             <Row className='show-grid'>
-              <Col xs={12} sm={6} md={4} lg={4} xl={4}>
-                <PackageCard />
-              </Col>
-              <Col xs={12} sm={6} md={4} lg={4} xl={4}>
-                <PackageCard />
-              </Col>
-              <Col xs={12} sm={6} md={4} lg={4} xl={4}>
-                <PackageCard />
-              </Col>
-              <Col xs={12} sm={6} md={4} lg={4} xl={4}>
-                <PackageCard />
-              </Col>
-              <Col xs={12} sm={6} md={4} lg={4} xl={4}>
-                <PackageCard />
-              </Col>
-              <Col xs={12} sm={6} md={4} lg={4} xl={4}>
-                <PackageCard />
-              </Col>
+              {packs}
             </Row>
           </div>
         </div>
