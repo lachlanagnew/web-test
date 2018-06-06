@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 const style = {
   card: {
     width: '100%',
-    height: '200px',
+    height: '220px',
     boxShadow: '6px 10px 31px 0 rgba(61, 70, 80, .3)',
     marginBottom: 10,
     backgroundColor: '#eee',

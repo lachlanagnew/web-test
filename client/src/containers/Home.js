@@ -32,7 +32,7 @@ const style = {
   },
   contact: {
     width: '100%',
-    backgroundColor: '#9FB8AD'
+    backgroundColor: '#545f80'
   },
   footer: {
     width: '100%',
@@ -53,8 +53,8 @@ const style = {
     fontSize: 40
   },
   contactCard: {
-    marginLeft: '10%',
-    marginRight: '10%',
+    width: '40%',
+    marginLeft: '5%',
     marginTop: '20px',
     borderRadius: '3px',
     overflow: 'hidden'
@@ -70,23 +70,23 @@ const packages = [{
   image: phoneIcon
 }, {
   title: 'Web Development',
-  desc: 'desc',
+  desc: 'From a simple static display page up to a progressive web application, we can meet your needs.',
   image: webIcon
 }, {
   title: 'Website Hosting',
-  desc: 'desc',
+  desc: 'Whatever the size, however big your userbase is, we can help you get it hosted.',
   image: hostingIcon
 }, {
   title: 'Design',
-  desc: 'desc',
+  desc: 'For all of your design needs our team of talented, in-house designers will meet your needs.',
   image: designIcon
 }, {
   title: 'Database Managment',
-  desc: 'desc',
+  desc: 'We can look after your database needs no matter the size.',
   image: databaseIcon
 }, {
   title: 'Cloud Computing',
-  desc: 'desc',
+  desc: 'Harnessing serverless technology you can deploy all of your solutions in the cloud.',
   image: cloudIcon
 }]
 
