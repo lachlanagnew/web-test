@@ -6,7 +6,10 @@ const style = {
     height: '200px',
     boxShadow: '6px 10px 31px 0 rgba(61, 70, 80, .3)',
     marginBottom: 10,
-    backgroundColor: '#eee'
+    backgroundColor: '#eee',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
   }
 }
 
@@ -17,6 +20,15 @@ class PackageCard extends Component {
   render () {
     return (
       <div style={style.card}>
+        <div>
+          <img />
+        </div>
+        <div>
+          <h3> Mobile </h3>
+        </div>
+        <div>
+          description
+        </div>
       </div>
     )
   }
